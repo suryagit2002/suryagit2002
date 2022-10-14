@@ -1,0 +1,46 @@
+Commands for Uninstall Mysql
+****************************
+
+
+===> sudo systemctl stop mysql
+===> sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+===> sudo rm -rf /etc/mysql /var/lib/mysql
+===> sudo apt-get remove --purge mysql*
+===> sudo apt autoremove
+===> sudo apt autoclean
+
+
+Commands for install Mysql
+**************************
+
+===>sudo apt update
+===>sudo apt upgrade
+===>sudo apt install mysql-server
+===>mysql --version
+===>sudo mysql_secure_installation
+===>sudo mysql -u root
+error: ERROR 1698 (28000): Access denied for user 'root'@'localhost'
+===>sudo mysql
+
+===>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345678';
+===>exit
+===>mysql -u root -p
+12345678
+===>create database student
+===>use student
+===>create table students (id int(10),name varchar(40),age int(3));
+===>insert into students values(1,'Prudhvi',19);
+===>commit;
+
+===================================================================================================
+
+Mysql connector jar file settings...
+************************************
+===> Copy mysql-connector-java-8.0.30.jar into /usr/share/java/mysql-connector-java-8.0.30.jar
+
+sys20@sys20-Vostro-3470:~/Downloads$ sudo mv mysql-connector-java-8.0.30.jar /usr/share/java/mysql-connector-java-8.0.30.jar
+[sudo] password for sys20:
+
+===> Path Setting
+c
+
